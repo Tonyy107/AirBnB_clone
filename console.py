@@ -24,15 +24,13 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def CREATE(self, line):
-        """Creates a new instance of BaseModel"""
+        """Creates a solution for emptylines and spaces"""
         if line == "" or line is None:
             print("** class name missing **")
-        elif line not in storage.classes():
-            print("** class doesn't exist **")
 
 
 
 
 
     if __name__ == '__main__':
-    HBNBCommand().cmdloop()
+        HBNBCommand().cmdloop()
