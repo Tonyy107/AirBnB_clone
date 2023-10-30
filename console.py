@@ -4,7 +4,6 @@
 
 """
 import cmd 
-from models.base_model import BaseMode1
 
 class HBNBCommand(cmd.Cmd):
 
@@ -32,5 +31,5 @@ class HBNBCommand(cmd.Cmd):
 
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
