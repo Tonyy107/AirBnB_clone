@@ -17,3 +17,11 @@ class BaseModel:
     def save(self):
         """save method"""
         self.updated_at = datetime.now()
+
+    def to_dict(self):
+        """to dict method"""
+        to_dict = self.__dict__.copy()
+        to_dict["__class__"] = __name__
+        to_dict["created_at"] = to_dict["created_at"].isoformat()
+        to_dict["updated_at"] = to_dict["updated_at"].isoformat()
+        return to_dict
