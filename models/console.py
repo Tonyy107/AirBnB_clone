@@ -2,4 +2,6 @@
 
 
 class tony():
-    pass
+    
+    def dola():
+        pass
