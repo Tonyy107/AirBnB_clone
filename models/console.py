@@ -1,1 +1,5 @@
-python 3mr 7a7a remix
+#!/usr/bin/python3
+
+
+class tony():
+    pass
