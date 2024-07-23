@@ -2,3 +2,6 @@
 
 class dola :
     pass
+
+def dola():
+    pass
