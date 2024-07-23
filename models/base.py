@@ -8,3 +8,6 @@ def dola():
 
 def tony():
     pass
+
+def tony2():
+    pass
