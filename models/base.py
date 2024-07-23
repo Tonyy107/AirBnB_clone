@@ -5,3 +5,6 @@ class dola :
 
 def dola():
     pass
+
+def tony():
+    pass
