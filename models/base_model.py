@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from datetime import datetime
-from uuid import uuid4
+import uuid
 """basemodel module"""
 
 
@@ -23,7 +23,7 @@ class BaseModel():
             created_at (datetime): The timestamp when the object was created.
             updated_at (datetime): The timestamp when the object was last updated.
         """
-        self.id = uuid4()
+        self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
 
