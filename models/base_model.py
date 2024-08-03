@@ -14,7 +14,7 @@ class BaseModel():
         updated_at (datetime): The datetime when the model instance was last updated.
     """
 
-    def __init__(self, id, created_at, updated_at):
+    def __init__(self):
         """
         Initializes a new instance of the BaseModel class.
 
