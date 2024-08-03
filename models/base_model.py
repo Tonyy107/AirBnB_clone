@@ -52,6 +52,8 @@ class BaseModel():
         Returns:
             dict: A dictionary representation of the object.
         """
-        self.updated_at = self.updated_at.strftime("%d/%m/%Y %H:%M:%S")
-        self.created_at = self.created_at.strftime("%d/%m/%Y %H:%M:%S")
-        return self.__dict__
+        my_dict = self.__dict__.copy()
+        my_dict["__class__"] = type(self).__name__
+        my_dict["created_at"] = my_dict["created_at"].isoformat()
+        my_dict["updated_at"] = my_dict["updated_at"].isoformat()
+        return my_dict
