@@ -36,7 +36,7 @@ class BaseModel():
         Returns:
             str: A string representation of the BaseModel instance.
         """
-        return f"[BaseModel] ({self.id}) {self.__dect__}"
+        return f"[BaseModel] ({self.id}) {self.__dict__}"
 
     def save(self):
         """
