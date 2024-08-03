@@ -54,4 +54,4 @@ class BaseModel():
         """
         self.updated_at = self.updated_at.strftime("%d/%m/%Y %H:%M:%S")
         self.created_at = self.created_at.strftime("%d/%m/%Y %H:%M:%S")
-        return self.__class__.__dict__
+        return self.__dict__
