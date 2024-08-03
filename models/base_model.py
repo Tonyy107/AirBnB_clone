@@ -23,7 +23,7 @@ class BaseModel():
             created_at (datetime): The timestamp when the object was created.
             updated_at (datetime): The timestamp when the object was last updated.
         """
-        self.id = uuid4
+        self.id = uuid4()
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
 
