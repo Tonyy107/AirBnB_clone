@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
 from datetime import datetime
-=======
 """basemodel module"""
 
 
@@ -16,6 +14,14 @@ class BaseModel():
     """
 
     def __init__(self, id, created_at, updated_at):
+        """
+        Initializes a new instance of the BaseModel class.
+
+        Args:
+            id (str): The unique identifier for the object.
+            created_at (datetime): The timestamp when the object was created.
+            updated_at (datetime): The timestamp when the object was last updated.
+        """
         self.id = id
         self.created_at = created_at
         self.updated_at = updated_at
@@ -31,21 +37,20 @@ class BaseModel():
             str: A string representation of the BaseModel instance.
         """
         return f"[BaseModel] ({self.id}) {self.__dect__}"
-      
+
     def save(self):
-      """
-    Updates the `updated_at` attribute with the current datetime.
-    """
-    self.updated_at = datetime.now()
+        """
+        Updates the `updated_at` attribute with the current datetime.
+        """
+        self.updated_at = datetime.now()
 
+    def to_dict(self):
+        """
+        Converts the object to a dictionary representation.
 
-  def to_dict(self):
-    """
-    Converts the object to a dictionary representation.
-
-    Returns:
-        dict: A dictionary representation of the object.
-    """
-    self.updated_at = self.updated_at.strftime("%d/%m/%Y %H:%M:%S")
-    self.created_at = self.created_at.strftime("%d/%m/%Y %H:%M:%S")
-    return self.__class__.__dict__
+        Returns:
+            dict: A dictionary representation of the object.
+        """
+        self.updated_at = self.updated_at.strftime("%d/%m/%Y %H:%M:%S")
+        self.created_at = self.created_at.strftime("%d/%m/%Y %H:%M:%S")
+        return self.__class__.__dict__
